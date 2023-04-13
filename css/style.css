@@ -16,11 +16,6 @@ h1 {
   font-size: 3em;
   margin-top: 0;
 }
-/* button {
-  font-size: 1.5em;
-  padding: 10px 20px;
-  margin-top: 20px;
-  cursor: pointer; */
   
 .btnVioleta{
     font: size 1em;
@@ -45,5 +40,11 @@ h1 {
   
   article {
     border-radius: 20px;
+  }
+  
+  @media screen and (max-width: 480px) {
+    #cronometro {
+      font-size: 2em;
+    }
   }
   
