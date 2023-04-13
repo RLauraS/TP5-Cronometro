@@ -2,6 +2,7 @@
 let cronometro = document.getElementById('cronometro');
 let btnIniciar = document.getElementById('btnIniciar');
 let btnDetener = document.getElementById('btnDetener');
+let btnReset = document.getElementById('btnReset');
 let intervalo;
 let segundos = 0, minutos = 0, horas = 0;
 
@@ -24,6 +25,14 @@ function detenerCronometro() {
   clearInterval(intervalo);
 }
 
+function resetCronometro(){
+  clearInterval(intervalo);
+  segundos = 0;
+  minutos = 0;
+  horas = 0;
+  cronometro.innerHTML = `${agregarCeros(horas)}:${agregarCeros(minutos)}:${agregarCeros(segundos)}`;
+}
+
 function agregarCeros(numero) {
   if(numero < 10) {
     return `0${numero}`;
@@ -37,4 +46,8 @@ btnIniciar.onclick = function() {
 
 btnDetener.onclick = function() {
   detenerCronometro();
+}
+
+btnReset.onclick = function() {
+  resetCronometro();
 }
